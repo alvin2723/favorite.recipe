@@ -1,0 +1,341 @@
+	body{
+		background-color: #ABEBC6; 
+	}
+	.head{
+		grid-area: header;s
+		height: auto;
+		width: 100%;
+		font-weight: bold;
+		font-family: sans-serif;
+		font-size: 25px;
+		text-align: center;
+		text-decoration: underline;
+			
+	}
+	.head > hr{
+		width: 100%;
+		
+
+	}
+	.menus { 
+		width: 100%;	
+		grid-area: menu; 
+		margin: 0 10px;
+		padding: 10px;
+	}
+	.menus li{
+		list-style: none;
+		border: none;
+		text-align: left;
+	}
+	.menus > li > a{
+		display: block;
+		text-decoration: none;
+		font-size: 10px;
+	}
+	
+	.mains{
+		grid-area: main;
+		width: 100%;
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		flex-flow: column wrap;
+		padding: 20px 10px;	
+	}
+	.image{
+		
+		display: block;
+		width: 100%;
+		height: auto;
+		border-radius: 5px;
+		text-align: center;
+	}
+	.image img{
+		width: 80%;
+		height: auto;
+	}
+	/*class for unordered list ingredient*/
+	.ingredient{
+		width: 100%;
+	}
+	.ingredient > h2{
+		font-family: sans-serif;
+		font-size: 30px;
+		color: red;
+		padding: 25px;
+	}
+	.unlist {
+		font-size: 20px;
+		margin-left: 50px;
+
+		list-style-image: url('http://tympanus.net/codrops-playground/assets/images/cssref/pseudo/list-style-image/list-style-image.png'); 
+		color: grey;
+		position: relative;
+	}
+	/*-----------------------------------------------------*/
+
+	/*class for orderedlist step by step*/
+	.step > h2{
+		font-family: sans-serif;
+		font-size: 30px;
+		color: blue;
+		padding: 25px;
+	}
+
+	.orderlist > li{
+		font-size: 20px;
+		margin-left: 50px;
+		list-style-type: upper-roman;
+		color: black;
+	}
+	
+	.orderlist > li> ul{
+		font-size: 20px;
+		position: relative;
+		list-style-image: url('https://mdn.mozillademos.org/files/11981/starsolid.gif');
+		color: grey;
+	}
+	/*------------------------------------------------------------------------------------*/
+	
+	.dishlooked > h2{
+		font-family: sans-serif;
+		font-size: 30px;
+		color: purple;
+		padding: 25px;
+	}
+	.dishimage{
+		height:281px;
+  		width:450px;
+  		margin-left: 50px;
+		position: relative;
+		
+	}
+	/*animated image*/
+	.dishimage img{
+  		width:450px;
+		height:281px;
+		position: absolute;	
+    	animation-name: multiple-image-crossfade;
+		animation-timing-function: ease-in-out;
+   		animation-iteration-count: infinite;
+    	animation-duration: 8s;
+	
+	}
+	.dishimage img:nth-of-type(1) {
+		      animation-delay: 6s;
+		    }
+	.dishimage img:nth-of-type(2) {
+		      animation-delay: 4s;
+		    }
+	.dishimage img:nth-of-type(3) {
+		      animation-delay: 2s;
+		    }
+	.dishimage img:nth-of-type(4) {
+		      animation-delay: 0;
+		    }
+	@keyframes multiple-image-crossfade {
+		  0% {
+		    opacity:1;
+		  }
+		  17% {
+		    opacity:1;
+		  }
+		  25% {
+		    opacity:0;
+		  }
+		  92% {
+		    opacity:0;
+		  }
+		  100% {
+		    opacity:1;
+		  }
+	}
+	/*-----------------------------------------*/
+	.related{
+
+		grid-area: right; 
+		border:none;
+		width:100%;
+		height: auto;
+		margin: 20px 20px;
+		
+		
+		/*background-color: lightgrey;	*/
+	}
+	.related > hr{
+		
+		margin-right: 50px;
+	}
+	.related > h2{
+		width: 100%;
+		
+		color: yellow;
+	}
+	.related > ul {
+		list-style-type: none;
+		width: 80%;
+		padding: 0;
+		
+		
+	} 
+	
+	.related > ul > li{
+
+		height: auto;
+		margin: 20px 0;
+		box-sizing: border-box;
+		background: #fff;
+		display: flex;
+		justify-content: space-between;
+		flex-flow: row wrap;
+		border-radius: 4px;
+		box-shadow: 0 5px 15px rgba(0,0,0,.5);
+		transition: .5s;
+	}
+	.related > ul > li:hover {
+		box-shadow: 0 15px 30px rgba(0,0,0,.5);
+	}
+	.related > ul > li > img{
+		float: left;
+		width: 100px;
+		height: 100px;
+		max-width: 50%;
+	}
+	.related > ul > li > div{
+		padding: 10px;
+		height: auto;
+		width: 40%;
+	}
+	
+	/*opinion class*/
+	.opinion{
+		padding: 25px;
+		font-family: sans-serif;
+			
+	}
+	.opinion > h2{
+		color : #F39C12;
+		font-size: 25px;
+		padding-bottom: 10px;
+	}
+	.opinion > p {
+		text-align: justify;
+	}
+	.opinion > p > span{
+		font-style: italic;
+	}
+	.opinion > p > span:last-child{
+		text-decoration: underline;
+	}
+	.opinion > p > span:first-child{
+		color:red;
+		font-style: normal;
+	}
+	.footer { 
+		width: 70%;
+		grid-area: footer; 
+		text-align: center;
+	}
+
+	
+	@media screen and (max-width: 400px){
+		body{
+			font-family: cursive;
+			background-color: lightblue;
+		}
+		.ingredient > h2{
+			
+			font-size: 15px;
+			color: yellow;
+			padding: 15px;
+		}
+		.unlist {
+			font-size: 10px;
+			margin-left: 50px;
+			list-style-image: url('http://tympanus.net/codrops-playground/assets/images/cssref/pseudo/list-style-image/list-style-image.png'); 
+			color: grey;
+			position: relative;
+		}
+		.step > h2{
+			
+			font-size: 15px;
+			color: yellow;
+			padding: 15px;
+		}
+
+		.orderlist > li{
+			font-size: 10px;
+			margin-left: 50px;
+			list-style-type: upper-roman;
+			color: black;
+		}
+		
+		.orderlist > li> ul{
+			font-size: 8px;
+			position: relative;
+			list-style-image: url('https://mdn.mozillademos.org/files/11981/starsolid.gif');
+			color: grey;
+		}
+	}
+	@media screen and (min-width: 401px) and (max-width:750px){
+		body{
+			font-family: monospace;
+			background-color: teal;
+		}
+		.ingredient > h2{
+			
+			font-size: 20px;
+			color: lightblue;
+			padding: 20px;
+		}
+
+		.unlist {
+			font-size: 15px;
+			margin-left: 50px;
+			list-style-image: url('http://tympanus.net/codrops-playground/assets/images/cssref/pseudo/list-style-image/list-style-image.png'); 
+			color: black;
+			position: relative;
+		}
+		.step > h2{
+			
+			font-size: 20px;
+			color: lightblue;
+			padding: 25px;
+		}
+
+		.orderlist > li{
+			font-size: 15px;
+			margin-left: 50px;
+			list-style-type: upper-roman;
+			color: black;
+		}
+		
+		.orderlist > li> ul{
+			font-size: 10px;
+			position: relative;
+			list-style-image: url('https://mdn.mozillademos.org/files/11981/starsolid.gif');
+			color: black;
+		}
+		
+	}
+	@media screen and (min-width: 750px)
+	{
+		body{
+			background-color: #ABEBC6;
+		}
+		.grid-container {
+			width: 100%;
+	 	 	display: grid;
+			justify-content: space-between;
+			flex-flow:row wrap;
+	  		grid-template-areas:
+	    		'header header header header header header'
+	    		'menu main main main right right'
+	    		'menu footer footer footer footer footer';
+	  		grid-gap: 10px;
+	  		
+	  		padding: 10px;
+		}
+		
+	}
